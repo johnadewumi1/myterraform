@@ -1,5 +1,5 @@
 resource "null_resource" "webHTTPD" {
-  depends_on = [oci_core_instance.myweb]
+  depends_on = [oci_core_instance.johnserver]
   provisioner "remote-exec" {
     connection {
         type = "ssh"

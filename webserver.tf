@@ -1,4 +1,4 @@
-resource "oci_core_instance" "myweb" {
+resource "oci_core_instance" "johnserver" {
 
   compartment_id = var.compartment_id
   availability_domain = var.ADs
@@ -19,7 +19,7 @@ resource "oci_core_instance" "myweb" {
 data "oci_core_vnic_attachments" "john_vnic_attach" {
   compartment_id = var.compartment_id
   availability_domain = var.ADs
-  instance_id = oci_core_instance.myweb.id
+  instance_id = oci_core_instance.johnserver.id
 }
 
 data "oci_core_vnic" "johnwebser_vnic" {
