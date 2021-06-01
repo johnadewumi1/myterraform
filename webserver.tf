@@ -3,10 +3,9 @@ resource "oci_core_instance" "web" {
   compartment_id = var.compartment_id
   shape = var.Shapes[0]
   display_name = "web"
-  subnet_id = oci_core_subnet.publicsubnet.id
   source_details {
-    source_id = "image"
-    source_type = var.Images[0]
+    source_type = "image"
+    source_id = var.Images[0]
   }
   metadata ={
    ssh_authorized_keys = file(var.public_key_oci)
