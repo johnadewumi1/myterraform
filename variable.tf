@@ -1,5 +1,4 @@
 variable "compartment_id" {
-  type = string
   default =  "ocid1.compartment.oc1..aaaaaaaapqytcu462c27feapv4bvf2ijszoqm7qmqjn4mx3koz3o5tjt5ska"
 }
 

@@ -1,8 +1,7 @@
 resource "oci_core_instance" "myweb" {
-#Required
 
-  availability_domain = var.ADs
   compartment_id = var.compartment_id
+  availability_domain = var.ADs
   shape = var.Shapes[0]
   source_details {
     source_type = "image"
