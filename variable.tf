@@ -34,7 +34,7 @@ variable "service_ports" {
 }
 
 variable "ADs" {
-  default = ["unja:US-SANJOSE-1-AD-1","unja:US-SANJOSE-1-AD-2", "unja:US-SANJOSE-1-AD-3" ]
+  default = ["US-SANJOSE-1-AD-1","US-SANJOSE-1-AD-2", "US-SANJOSE-1-AD-3" ]
 }
 
 variable "Shapes" {
