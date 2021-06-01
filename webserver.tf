@@ -1,5 +1,5 @@
 resource "oci_core_instance" "myweb" {
-  availability_domain = var.ADs[0]
+  availability_domain = var.ADs
   compartment_id = var.compartment_id
   shape = var.Shapes[0]
   display_name = "myweb"
