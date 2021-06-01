@@ -13,7 +13,7 @@ variable "fingerprint" {
   default = "39:00:25:bf:cf:9b:00:70:87:f5:75:74:7b:71:b1:40"
 }
 variable "private_key_path" {
-  default = "oci_api_key.pem"
+  default = "/home/.oci/oci_api_key.pem"
 }
 variable "region" {
   default = "us-sanjose-1"
