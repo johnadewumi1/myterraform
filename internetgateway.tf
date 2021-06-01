@@ -1,4 +1,4 @@
-resource "oci_core_internet_gateways" "john_internet_gateway" {
+resource "oci_core_internet_gateway" "john_internet_gateways" {
     #Required
     compartment_id = var.compartment_id
 
