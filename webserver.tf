@@ -1,4 +1,6 @@
 resource "oci_core_instance" "myweb" {
+#Required
+
   availability_domain = var.ADs
   compartment_id = var.compartment_id
   shape = var.Shapes[0]
