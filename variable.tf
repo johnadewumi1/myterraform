@@ -34,7 +34,7 @@ variable "service_ports" {
 }
 
 variable "ADs" {
-  default = ["US-SANJOSE-1-AD-1","US-SANJOSE-1-AD-2", "US-SANJOSE-1-AD-3" ]
+  default = "" 
 }
 
 variable "Shapes" {
