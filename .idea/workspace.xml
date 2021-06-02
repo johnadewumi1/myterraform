@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/provider.tf" beforeDir="false" afterPath="$PROJECT_DIR$/provider.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route.tf" beforeDir="false" afterPath="$PROJECT_DIR$/route.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subnet.tf" beforeDir="false" afterPath="$PROJECT_DIR$/subnet.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variable.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variable.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webserver.tf" beforeDir="false" afterPath="$PROJECT_DIR$/webserver.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
