@@ -37,7 +37,7 @@ variable "ADs" {
 }
 
 variable "Shapes" {
-  default = ["VM.Standard.E2.1","VM.Standard.E2.1.Micro","VM.Standard2.1","VM.Standard.E2.1","VM.Standard.E2.2" ]
+  default = "VM.Standard2.1"
 }
 
 variable "Images" {
