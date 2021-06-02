@@ -1,7 +1,7 @@
 resource "oci_core_instance" "johnserver" {
 
   compartment_id = var.compartment_id
-  availability_domain = var.ADs[0]
+  availability_domain = data.template_file.ad_names.*.rendered[0]
   shape = var.Shapes[0]
   source_details {
     source_type = "image"
@@ -18,12 +18,20 @@ resource "oci_core_instance" "johnserver" {
 
 data "oci_core_vnic_attachments" "john_vnic_attach" {
   compartment_id = var.compartment_id
-  availability_domain = var.ADs[0]
+  availability_domain = data.template_file.ad_names.*.rendered[0]
   instance_id = oci_core_instance.johnserver.id
 }
 
 data "oci_core_vnic" "johnwebser_vnic" {
   vnic_id = data.oci_core_vnic_attachments.john_vnic_attach.vnic_attachments.0.vnic_id
+}
+
+data "oci_identity_availability_domains" "ad" {
+  compartment_id = var.compartment_id
+}
+data "template_file" "ad_names" {
+  count    = length(data.oci_identity_availability_domains.ad.availability_domains)
+  template = lookup(data.oci_identity_availability_domains.ad.availability_domains[count.index], "name")
 }
 output "webPublicIp" {
 //  value = oci_core_instance.web.public_ip
