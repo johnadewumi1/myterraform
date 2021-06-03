@@ -1,5 +1,5 @@
 variable "compartment_id" {
-  default =  "ocid1.compartment.oc1..aaaaaaaapqytcu462c27feapv4bvf2ijszoqm7qmqjn4mx3koz3o5tjt5ska"
+  default = "ocid1.compartment.oc1..aaaaaaaapqytcu462c27feapv4bvf2ijszoqm7qmqjn4mx3koz3o5tjt5ska"
 }
 
 variable "tenancy_ocid" {
@@ -29,7 +29,7 @@ variable "VCN-CIDR" {
 }
 
 variable "service_ports" {
-  default = [80,22,443]
+  default = [80, 22, 443]
 }
 
 variable "ADs" {
