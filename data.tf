@@ -27,5 +27,4 @@ data "oci_core_images" "oraclelinux-7-7" {
 
 data "oci_core_shapes" "tf_shapes" {
   compartment_id = var.compartment_id
-  image_id       = data.oci_core_images.oraclelinux-7-7.images.0.id
 }
