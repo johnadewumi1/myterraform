@@ -40,13 +40,17 @@ variable "Shapes" {
   default = "VM.Standard.E2.1.Micro"
 }
 
+variable "Images" {
+  default = ""
+}
+
 //variable "Images" {
 //  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
 //}
 
-variable "operating_system" {
-  default = "Oracle Linux"
-}
-variable "operating_system_version" {
-  default = "8"
-}
+//variable "operating_system" {
+//  default = "Oracle Linux"
+//}
+//variable "operating_system_version" {
+//  default = "7.7"
+//}
