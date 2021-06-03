@@ -4,7 +4,7 @@ resource "oci_core_instance" "johnserver2" {
   availability_domain = data.template_file.ad_names.*.rendered[1]
   shape               = var.Shapes
   display_name        = "johnserver2"
-  subnet_id           = oci_core_instance.publicsubnet.id
+  subnet_id           = oci_core_subnet.publicsubnet.id
   source_details {
     source_type = "image"
     source_id   = var.Images
