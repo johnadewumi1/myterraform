@@ -9,6 +9,8 @@ data "template_file" "ad_names" {
 
 data "oci_core_images" "tf_images" {
   compartment_id           = var.compartment_id
+  operating_system         = var.operating_system
+  operating_system_version = var.operating_system_version
   shape                    = var.Shapes
 }
 
