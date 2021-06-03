@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/subnet.tf" beforeDir="false" afterPath="$PROJECT_DIR$/subnet.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/variable.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variable.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vcn.tf" beforeDir="false" afterPath="$PROJECT_DIR$/vcn.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver.tf" beforeDir="false" afterPath="$PROJECT_DIR$/webserver.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
