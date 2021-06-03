@@ -3,7 +3,7 @@ resource "oci_core_instance" "johnserver" {
   compartment_id      = var.compartment_id
   availability_domain = data.template_file.ad_names.*.rendered[0]
   shape               = var.Shapes
-  johnserver_user     = "opc"
+
   source_details {
     source_type = "image"
     source_id   = var.Images
