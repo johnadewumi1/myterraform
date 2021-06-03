@@ -1,7 +1,7 @@
 resource "oci_core_instance" "johnserver2" {
 
   compartment_id      = var.compartment_id
-  availability_domain = data.template_file.ad_names.*.rendered[1]
+  availability_domain = data.template_file.ad_names.*.rendered[0]
   shape               = var.Shapes
   display_name        = "johnserver2"
   subnet_id           = oci_core_subnet.publicsubnet.id
@@ -20,7 +20,7 @@ resource "oci_core_instance" "johnserver2" {
 
 data "oci_core_vnic_attachments" "john_vnic_attach2" {
   compartment_id      = var.compartment_id
-  availability_domain = data.template_file.ad_names.*.rendered[1]
+  availability_domain = data.template_file.ad_names.*.rendered[0]
   instance_id         = oci_core_instance.johnserver2.id
 }
 
