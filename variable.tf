@@ -37,11 +37,11 @@ variable "ADs" {
 }
 
 variable "Shapes" {
-  default = "VM.Standard2.1"
+  default = ["VM.Standard2.1"]
 }
 
-variable "Images" {
-  default = ""
+variable "images" {
+  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
 }
 variable "johnserver_user" {
   description = "Login user name for johnserver"
