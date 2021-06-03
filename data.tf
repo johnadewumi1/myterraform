@@ -18,6 +18,7 @@ data "oci_core_images" "oraclelinux-7-7" {
   compartment_id           = var.compartment_id
   operating_system         = "Oracle Linux"
   operating_system_version = "7.7"
+  shape                    = var.Shapes
   filter {
     name   = "display_name"
     values = ["^([a-zA-z]+)-([a-zA-z]+)-([\\.0-9]+)-([\\.0-9-]+)$"]
