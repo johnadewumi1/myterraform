@@ -13,11 +13,7 @@ data "template_file" "ad_names" {
 //  operating_system_version = var.operating_system_version
 //  shape                    = var.Shapes
 //}
-//
-//data "oci_core_shapes" "tf_shapes" {
-//  compartment_id = var.compartment_id
-//  image_id       = data.oci_core_images.tf_images.images.0.id
-//}
+
 data "oci_core_images" "oraclelinux-7-7" {
   compartment_id           = var.compartment_id
   operating_system         = "Oracle Linux"
@@ -27,4 +23,9 @@ data "oci_core_images" "oraclelinux-7-7" {
     values = ["^([a-zA-z]+)-([a-zA-z]+)-([\\.0-9]+)-([\\.0-9-]+)$"]
     regex  = true
   }
+}
+
+data "oci_core_shapes" "tf_shapes" {
+  compartment_id = var.compartment_id
+  image_id       = data.oci_core_images.oraclelinux-7-7.images.0.id
 }
