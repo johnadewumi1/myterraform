@@ -37,12 +37,12 @@ variable "ADs" {
 }
 
 variable "Shapes" {
-  default = "VM.Standard2.1"
+  default = "VM.Standard.E2.1.Micro"
 }
 
-variable "Images" {
-  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
-}
+//variable "Images" {
+//  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
+//}
 
 variable "operating_system" {
   default = "Oracle Linux"

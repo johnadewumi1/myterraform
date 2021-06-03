@@ -5,7 +5,7 @@ resource "oci_core_instance" "johnserver" {
   shape = var.Shapes
   source_details {
     source_type = "image"
-    source_id = var.Images[0]
+    source_id = oci_core_images.tf_image.id
   }
   metadata ={
    ssh_authorized_keys = file(var.public_key_oci)
