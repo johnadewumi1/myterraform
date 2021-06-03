@@ -43,6 +43,11 @@ variable "Shapes" {
 variable "Images" {
   default = ""
 }
+variable "johnserver_user" {
+  description = "Login user name for johnserver"
+  default     = "opc"
+}
+
 
 //variable "Images" {
 //  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
