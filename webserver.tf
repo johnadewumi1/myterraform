@@ -9,7 +9,7 @@ resource "oci_core_instance" "johnserver" {
   fault_domain        = "FAULT-DOMAIN-1"
   source_details {
     source_type = "image"
-    source_id   = lookup[data.oci_core_images.oraclelinux-7-7.Images[0],"id"]
+    source_id   = lookup(data.oci_core_images.oraclelinux-7-7.Images[0],"id")
   }
   metadata = {
     ssh_authorized_keys = file(var.public_key_oci)
