@@ -40,7 +40,7 @@ variable "Shapes" {
   default = "VM.Standard2.1"
 }
 
-variable "images" {
+variable "image" {
   default = ["ocid1.image.oc1.iad.aaaaaaaaijzevirp67bdceiebqeg4epuqstqcogohn3gskw76ngxupke3zfa"]
 }
 variable "johnserver_user" {
