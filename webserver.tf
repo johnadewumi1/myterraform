@@ -2,14 +2,14 @@ resource "oci_core_instance" "johnserver" {
 
   compartment_id      = var.compartment_id
   # availability_domain = data.template_file.ad_names.*.rendered[0]
-  availability_domain = lookup(data.oci_identity_availability_domains.ad.availability_domains[0], "name")
+  availability_domain = var.ADs
   shape               = var.Shapes
   display_name        = "johnserver"
   subnet_id           = oci_core_subnet.publicsubnet.id
   fault_domain        = "FAULT-DOMAIN-1"
   source_details {
     source_type = "image"
-    source_id   = lookup(data.oci_core_images.oraclelinux-7-7.images[0],"id")
+    source_id   = source_id   = var.image
   }
   metadata = {
     ssh_authorized_keys = file(var.public_key_oci)
@@ -23,7 +23,7 @@ resource "oci_core_instance" "johnserver" {
 data "oci_core_vnic_attachments" "john_vnic_attach" {
   compartment_id      = var.compartment_id
   # availability_domain = data.template_file.ad_names.*.rendered[0]
-  availability_domain = lookup(data.oci_identity_availability_domains.ad.availability_domains[0], "name")
+  availability_domain = var.ADs
   instance_id         = oci_core_instance.johnserver.id
 }
 

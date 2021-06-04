@@ -9,19 +9,19 @@ variable "user_ocid" {
   default = "ocid1.user.oc1..aaaaaaaamrhp2f3m2evpmlme32kqavvgynxaz66oxfvrdephahsf72mwk6cq"
 }
 variable "fingerprint" {
-  default = "39:00:25:bf:cf:9b:00:70:87:f5:75:74:7b:71:b1:40"
+  default = "80:3d:6d:28:1a:f7:82:94:0d:30:04:3f:e1:b9:3c:10"
 }
 variable "private_key_path" {
   default = "/home/opc/credentials/oci_api_key.pem"
 }
 variable "region" {
-  default = "us-sanjose-1"
+  default = "us-ashburn-1"
 }
 variable "private_key_oci" {
-  default = "/home/opc/credentials/id_rsa"
+  default = "/home/opc/.ssh/id_rsa"
 }
 variable "public_key_oci" {
-  default = "/home/opc/credentials/id_rsa.pub"
+  default = "/home/opc/.ssh/id_rsa.pub"
 }
 
 variable "VCN-CIDR" {
@@ -33,7 +33,7 @@ variable "service_ports" {
 }
 
 variable "ADs" {
-  default = ["unja:US-SANJOSE-1-AD-1","unja:US-SANJOSE-1-AD-1"]
+  default = ["GrCh:US-ASHBURN-AD-1","GrCh:US-ASHBURN-AD-2"]
 }
 
 variable "Shapes" {
@@ -41,7 +41,7 @@ variable "Shapes" {
 }
 
 variable "images" {
-  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
+  default = ["ocid1.image.oc1.iad.aaaaaaaaijzevirp67bdceiebqeg4epuqstqcogohn3gskw76ngxupke3zfa"]
 }
 variable "johnserver_user" {
   description = "Login user name for johnserver"
