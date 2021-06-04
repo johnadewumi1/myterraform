@@ -48,6 +48,31 @@ variable "johnserver_user" {
   default     = "opc"
 }
 
+variable "FlexShapeOCPUS" {
+    default = 1
+}
+variable "FlexShapeMemory" {
+    default = 1
+}
+
+
+variable "instance_os" {
+  default = "Oracle Linux"
+}
+
+variable "linux_os_version" {
+  default = "7.9"
+}
+
+
+# Dictionary Locals=
+locals {
+  compute_flexible_shapes = [
+    "VM.Standard.E3.Flex",
+    "VM.Standard.E4.Flex"
+  ]
+}
+
 
 //variable "Images" {
 //  default = ["ocid1.image.oc1.us-sanjose-1.aaaaaaaasuer4imvqelnx65zx4m26wfof5chorsj5gxegwatjbdgtsdfcygq"]
