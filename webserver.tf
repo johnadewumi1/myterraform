@@ -9,7 +9,7 @@ resource "oci_core_instance" "johnserver" {
   fault_domain        = "FAULT-DOMAIN-1"
   source_details {
     source_type = "image"
-    source_id   = source_id   = var.image
+    source_id   = var.image
   }
   metadata = {
     ssh_authorized_keys = file(var.public_key_oci)
