@@ -6,7 +6,7 @@ resource "null_resource" "web2HTTPD" {
       user        = "opc"
       host        = "data.oci_core_vnic.johnwebser2_vnic.public_ip_address"
       private_key = file(var.private_key_oci)
-      script_path = "/home/opc/.oci/oci_api_key.pem"
+      script_path = "/home/opc/ssh.sh"
       agent       = false
       timeout     = "10m"
     }
