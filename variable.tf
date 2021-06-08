@@ -12,7 +12,7 @@ variable "fingerprint" {
   default = "80:3d:6d:28:1a:f7:82:94:0d:30:04:3f:e1:b9:3c:10"
 }
 variable "private_key_path" {
-  default = "/home/opc/credentials/oci_api_key.pem"
+  default = "/home/opc/.oci/oci_api_key.pem"
 }
 variable "region" {
   default = "us-ashburn-1"
@@ -41,7 +41,7 @@ variable "Shapes" {
 }
 
 variable "image" {
-  default = "ocid1.image.oc1.iad.aaaaaaaaijzevirp67bdceiebqeg4epuqstqcogohn3gskw76ngxupke3zfa"
+  default = "ocid1.image.oc1.iad.aaaaaaaaw2wavtqrd3ynbrzabcnrs77pinccp55j2gqitjrrj2vf65sqj5kq"
 }
 variable "johnserver_user" {
   description = "Login user name for johnserver"
