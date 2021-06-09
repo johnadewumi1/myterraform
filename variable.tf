@@ -71,11 +71,11 @@ variable "load_balancer_shape" {
 
 
 variable "load_balancer_shape_details_maximum_bandwidth_in_mbps" {
-  default = "20Mbps"
+  default = "20"
 }
 
 variable "load_balancer_shape_details_minimum_bandwidth_in_mbps" {
-  default = "100Mbps"
+  default = "100"
 }
 
 variable "listener_port" {

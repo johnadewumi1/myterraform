@@ -1,7 +1,7 @@
 resource "oci_load_balancer" "johnlb" {
   shape          = var.load_balancer_shape
   compartment_id = var.compartment_id
-  subnet_ids     = oci_core_subnet.publicsubnet.id
+  subnet_ids     = [oci_core_subnet.publicsubnet.id]
   display_name   = "johnlb"
 
 
