@@ -33,7 +33,7 @@ variable "service_ports" {
 }
 
 variable "ADs" {
-  default = ["GrCh:US-ASHBURN-AD-1","GrCh:US-ASHBURN-AD-2"]
+  default = ["GrCh:US-ASHBURN-AD-1", "GrCh:US-ASHBURN-AD-2"]
 }
 
 variable "Shapes" {
@@ -49,10 +49,10 @@ variable "johnserver_user" {
 }
 
 variable "FlexShapeOCPUS" {
-    default = 1
+  default = 1
 }
 variable "FlexShapeMemory" {
-    default = 1
+  default = 1
 }
 
 
@@ -65,6 +65,34 @@ variable "linux_os_version" {
 }
 
 
+variable "load_balancer_shape" {
+  default = "100Mbps"
+}
+
+
+variable "load_balancer_shape_details_maximum_bandwidth_in_mbps" {
+  default = "20Mbps"
+}
+
+variable "load_balancer_shape_details_minimum_bandwidth_in_mbps" {
+  default = "100Mbps"
+}
+
+variable "listener_port" {
+  default = 80
+}
+
+variable "listener_protocol" {
+  default = "HTTPS"
+}
+
+variable "backend_set_policy" {
+  default = "ROUND_ROBIN"
+
+}
+
+
+
 # Dictionary Locals=
 locals {
   compute_flexible_shapes = [
@@ -72,6 +100,8 @@ locals {
     "VM.Standard.E4.Flex"
   ]
 }
+
+
 
 
 //variable "Images" {
