@@ -83,7 +83,7 @@ variable "listener_port" {
 }
 
 variable "listener_protocol" {
-  default = "HTTPS"
+  default = "HTTP"
 }
 
 variable "backend_set_policy" {
