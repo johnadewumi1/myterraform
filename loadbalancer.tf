@@ -1,7 +1,7 @@
 resource "oci_load_balancer" "johnlb" {
   shape          = var.load_balancer_shape
   compartment_id = var.compartment_id
-  subnet_ids      = oci_core_subnet.publicsubnet.id
+  subnet_ids     = oci_core_subnet.publicsubnet.id
   display_name   = "johnlb"
 
 
@@ -40,7 +40,7 @@ resource "oci_load_balancer_backend_set" "john_backend_set" {
 resource "oci_load_balancer_backend" "server_backend1" {
   #Required
   backendset_name  = oci_load_balancer_backend_set.john_backend_set.name
-  ip_address       = var.oci_core_instance.johnserver.private_1p
+  ip_address       = oci_core_instance.johnserver.private_1p
   load_balancer_id = oci_load_balancer.johnlb.id
   port             = var.listener_port
 
@@ -54,7 +54,7 @@ resource "oci_load_balancer_backend" "server_backend1" {
 resource "oci_load_balancer_backend" "server_backend2" {
   #Required
   backendset_name  = oci_load_balancer_backend_set.john_backend_set.name
-  ip_address       = var.oci_core_instance.johnserver2.private_1p
+  ip_address       = oci_core_instance.johnserver2.private_1p
   load_balancer_id = oci_load_balancer.johnlb.id
   port             = var.listener_port
 
