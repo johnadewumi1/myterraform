@@ -10,8 +10,8 @@ resource "oci_load_balancer_listener" "johnlbs_listener" {
   default_backend_set_name = oci_load_balancer_backend_set.john_backend_set.name
   load_balancer_id         = oci_load_balancer.johnlb.id
   name                     = "johnlbs_listener"
-  port                     = var.listener_port
-  protocol                 = var.listener_protocol
+  port                     = 80
+  protocol                 = "HTTP"
 
 }
 
