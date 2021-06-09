@@ -1,4 +1,4 @@
-resource "oci_load_balacer" "johnlb" {
+resource "oci_load_balancer" "johnlb" {
   shape          = var.load_balancer_shape
   compartment_id = var.compartment_id
   subnet_id      = oci_core_subnet.publicsubnet.id
