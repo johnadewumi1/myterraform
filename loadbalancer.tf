@@ -40,7 +40,7 @@ resource "oci_load_balancer_backend_set" "john_backend_set" {
 resource "oci_load_balancer_backend" "server_backend1" {
   #Required
   backendset_name  = oci_load_balancer_backend_set.john_backend_set.name
-  ip_address       = oci_core_instance.johnserver.private_1p
+  ip_address       = oci_core_instance.johnserver.private_ip
   load_balancer_id = oci_load_balancer.johnlb.id
   port             = var.listener_port
 
@@ -54,7 +54,7 @@ resource "oci_load_balancer_backend" "server_backend1" {
 resource "oci_load_balancer_backend" "server_backend2" {
   #Required
   backendset_name  = oci_load_balancer_backend_set.john_backend_set.name
-  ip_address       = oci_core_instance.johnserver2.private_1p
+  ip_address       = oci_core_instance.johnserver2.private_ip
   load_balancer_id = oci_load_balancer.johnlb.id
   port             = var.listener_port
 
