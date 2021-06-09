@@ -3,14 +3,6 @@ resource "oci_load_balancer" "johnlb" {
   compartment_id = var.compartment_id
   subnet_ids     = [oci_core_subnet.publicsubnet.id]
   display_name   = "johnlb"
-
-
-
-  shape_details {
-    #Required
-    maximum_bandwidth_in_mbps = var.load_balancer_shape_details_maximum_bandwidth_in_mbps
-    minimum_bandwidth_in_mbps = var.load_balancer_shape_details_minimum_bandwidth_in_mbps
-  }
 }
 
 resource "oci_load_balancer_listener" "johnlbs_listener" {
