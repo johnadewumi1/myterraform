@@ -33,7 +33,7 @@ resource "oci_load_balancer_backend_set" "john_backend_set" {
     response_body_regex = ".*"
   }
   load_balancer_id = oci_load_balancer.johnlb.id
-  name             = var.john_backend_set
+  name             = "john_backend_set"
   policy           = var.backend_set_policy
 }
 
@@ -67,5 +67,5 @@ resource "oci_load_balancer_backend" "server_backend2" {
 
 
 output "johnlb_public_ip" {
-  value = [oci_load_balancer.johnlb.ip_address]
+  value = [oci_load_balancer.johnlb.ip_addresses]
 }
