@@ -13,7 +13,7 @@ resource "null_resource" "web2HTTPD" {
     inline = [
       "sudo yum update -y",
       "sudo yum install -y httpd",
-      "sudo touch /var/www/html/index.html"
+      "sudo touch /var/www/html/index.html",
       "sudo /bin/su -c \"echo 'welcome to John server2! Your home...' > /var/www/html/index.html\"",
       "sudo service firewalld stop",
       "sudo service httpd start",
