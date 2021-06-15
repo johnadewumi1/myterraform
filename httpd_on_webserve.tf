@@ -11,15 +11,25 @@ resource "null_resource" "webHTTPD" {
       timeout     = "10m"
     }
     inline = [
-      "echo '== 1. installing HTTPD package with yum'",
-      "sudo -u root yum -y -q install httpd",
-
-      "echo '== 2. Creating /var/www/html/index.html'",
-      "sudo -u root touch /var/www/html/index.html",
+      "sudo yum update -y",
+      "sudo yum install -y httpd",
+      "sudo touch /var/www/html/index.html"
       "sudo /bin/su -c \"echo 'welcome to John server1! Your home...' > /var/www/html/index.html\"",
-
-      "echo '== 3. Disabling firewal and strting HTTPD service'",
-      "sudo -u root service firewall stop",
-    "sudo -u root service httpd start"]
+      "sudo service firewalld stop",
+      "sudo service httpd start",
+    ]
   }
 }
+
+
+
+#   "echo '== 1. installing HTTPD package with yum'",
+#   "sudo -u root yum -y -q install httpd",
+
+#   "echo '== 2. Creating /var/www/html/index.html'",
+#   "sudo -u root touch /var/www/html/index.html",
+#   "sudo /bin/su -c \"echo 'welcome to John server1! Your home...' > /var/www/html/index.html\"",
+
+#   "echo '== 3. Disabling firewal and strting HTTPD service'",
+#   "sudo -u root service firewalld stop",
+# "sudo -u root service httpd start"]
