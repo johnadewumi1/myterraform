@@ -4,7 +4,7 @@ resource "null_resource" "webHTTPD" {
     connection {
       type        = "ssh"
       user        = "opc"
-      host        = "oci_core_instance.johnwebser.public_ip_address"
+      host        = data.oci_core_vnic.johnwebser_vnic[count.index].public_ip_address
       private_key = file(var.private_key_oci)
       script_path = "/home/opc/myssh.sh"
       agent       = false
