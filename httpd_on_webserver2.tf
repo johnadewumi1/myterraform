@@ -4,7 +4,7 @@ resource "null_resource" "web2HTTPD" {
     connection {
       type        = "ssh"
       user        = "opc"
-      host        = data.oci_core_vnic.johnwebser2_vnic[count.index].public_ip_address
+      host        = data.oci_core_vnic.johnwebser2_vnic.public_ip_address
       private_key = file(var.private_key_oci)
       script_path = "/home/opc/ssh.sh"
       agent       = false
